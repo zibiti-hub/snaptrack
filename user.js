@@ -77,15 +77,17 @@ function callPostFromLocalFile() {
     });
 }
 
+console.log('user.js');
+
 // Using with .then()
-callGetFromLocalFile()
-  .then(data => {
-    console.log('GET Success:', data);
-    // Update your UI here
-  })
-  .catch(error => {
-    console.error('GET Error:', error);
-  });
+// callGetFromLocalFile()
+//   .then(data => {
+//     console.log('GET Success:', data);
+//     // Update your UI here
+//   })
+//   .catch(error => {
+//     console.error('GET Error:', error);
+//   });
 
 // callPostFromLocalFile()
 //   .then(data => {
