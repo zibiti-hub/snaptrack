@@ -1,4 +1,5 @@
 function callGetFromLocalFile() {
+    console.log('Calling get endpoint');
   const service = "projects";
   const requestor = "USER-000";
   const action = "getProjects";
