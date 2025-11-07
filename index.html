@@ -192,6 +192,21 @@
     
   </script>
 
+  <script>
+    const endpoint = "https://script.google.com/macros/s/AKfycbzvhbKRR2ltBTnUKWwyaXhNEF3CR_GYOoax4lD_jx4Iap5ye7A0M0KhiW5BBWenN-1WJQ/exec";
+
+    fetch(`${endpoint}?name=Mighk`)
+      .then(res => res.json())
+      .then(data => {
+        console.log("Response from GAS:", data);
+        document.getElementById("output").textContent = data.greeting;
+      })
+      .catch(err => console.error("Fetch error:", err));
+  </script>
+
+  <div id="output"></div>
+
+
   <script src="user.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
