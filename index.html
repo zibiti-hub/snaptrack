@@ -190,10 +190,31 @@
       sidebar.classList.toggle('collapsed');
       console.log('toggle sidebar');
     });
+
+    const endpointId = "AKfycbz-lVdwbXQcmNEJCTx_cnKWjtfV_hsCHVHsmKK4M1LKvuhsKpsmbls7826xEmwO8H7PpA";
+    // const endpoint = "https://script.google.com/macros/s/AKfycbz-lVdwbXQcmNEJCTx_cnKWjtfV_hsCHVHsmKK4M1LKvuhsKpsmbls7826xEmwO8H7PpA/exec";
+
+    const service = "projects";
+    const requestor = "USER-000";
+    const action = "getProjects";
+    const payload = JSON.stringify({
+      id: "PRJ-000"
+    });
+
+    const url = `https://script.google.com/macros/s/${endpointId}/exec?service=${service}&requestor=${requestor}&action=${action}&payload=${encodeURIComponent(payload)}`;
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log("Response from GAS:", data);
+      })
+      .catch(err => console.error("Fetch error: ", err));
+      
+
     
   </script>
 
-  <script>
+  <!-- <script>
     const endpoint = "https://script.google.com/macros/s/AKfycbzvhbKRR2ltBTnUKWwyaXhNEF3CR_GYOoax4lD_jx4Iap5ye7A0M0KhiW5BBWenN-1WJQ/exec";
 
     fetch(`${endpoint}?name=Mighk`)
@@ -203,7 +224,17 @@
         // document.getElementById("output").textContent = data.greeting;
       })
       .catch(err => console.error("Fetch error:", err));
-  </script>
+
+    
+
+
+      
+
+    
+
+
+
+  </script> -->
 
   
 
