@@ -182,6 +182,7 @@
     </div>
   </div>
 
+
   <script>
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebar = document.getElementById('sidebar');
@@ -199,12 +200,12 @@
       .then(res => res.json())
       .then(data => {
         console.log("Response from GAS:", data);
-        document.getElementById("output").textContent = data.greeting;
+        // document.getElementById("output").textContent = data.greeting;
       })
       .catch(err => console.error("Fetch error:", err));
   </script>
 
-  <div id="output"></div>
+  
 
 
   <script src="user.js"></script>
