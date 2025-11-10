@@ -54,7 +54,7 @@
       <div class="row g-3 mb-0">
         <div class="col">
           <div class="p-3 border rounded">
-            <p class="mb-0 p-0">Master Row</p>
+            <p class="mb-0 p-0">Master RowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRowRow</p>
           </div>
         </div>
       </div>
@@ -202,6 +202,9 @@
 
     const url = `https://script.google.com/macros/s/${endpointId}/exec?service=${service}&requestor=${requestor}&action=${action}&payload=${encodeURIComponent(payload)}`;
 
+    const metadata = {
+      
+    }
     fetch(url)
       .then(res => res.json())
       .then(data => {
